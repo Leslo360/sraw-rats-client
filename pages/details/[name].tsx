@@ -103,7 +103,7 @@ const PersonDetails = ({ QueryData} : any) => {
 
             <footer className={styles.footer}>
               <Link href="/">
-                <a >
+                <a className={styles.btn}>
 
                 <h5>&larr;Go Back</h5>
                 </a>
