@@ -36,8 +36,6 @@ export default function Home() {
     setPageNum(pageNum - 1)
   }
 
-
-
   return (
     <div className={styles.container}>
       <Head>
@@ -60,7 +58,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Star Wars
+          Star Wars.
         </h1>
 
         <p className={styles.description}>

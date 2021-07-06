@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "StarHol";
+  font-family: "StarjHol";
   src: url("/fonts/StarJedi/Starjhol.ttf");
 }
 
@@ -41,32 +41,6 @@
   cursor: pointer;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
 
 
 .grid {
@@ -89,7 +63,7 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   width: 45%;
   box-shadow: inset 2px 2px 10px rgba(233, 233, 233, 0.637);
-  font-family: StarHol;
+  font-family: StarjHol;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.233);
 
@@ -115,10 +89,6 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
 
 .btn {
   background: rgba(255, 255, 255, 0.322);
