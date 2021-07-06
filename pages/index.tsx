@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {  gql, useQuery } from '@apollo/client'
 import Link from "next/link"
@@ -26,7 +25,7 @@ export default function Home() {
   })
 
   if(loading) return <h1 className={styles.container}>Loading DATA...</h1>
-  if(error){  console.log(error)}
+  if(error) console.log(error)
  
 
   const handleNextPage = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ApolloClient, gql, InMemoryCache, useQuery } from '@apollo/client'
+import { gql, useQuery } from '@apollo/client'
 import Link from "next/link"
 import styles from '../../styles/Home.module.css'
 import Head from 'next/head'
@@ -28,13 +28,10 @@ query getPersonDetails($name : String!){
           gender
           homeworld {
               name
-              rotation_period
-              orbital_period
               diameter
               climate
               gravity
               terrain
-              surface_water
               population
           }
       } 
@@ -75,17 +72,28 @@ const PersonDetails = ({ QueryData} : any) => {
                 <p>Birth Year : {results.birth_year}</p>
                 <p>Gender : {results.gender}</p>
                 <h4>Homewolrd</h4>
-                 <ul>
-                    <li>Name :  {results.homeworld.name}</li>
-                    <li>Rotation Period :  {results.homeworld.rotation_period}</li>
-                    <li>Orbital Period :  {results.homeworld.orbital_period}</li>
-                    <li>Diameter :  {results.homeworld.diameter}</li>
-                    <li>Climate :  {results.homeworld.climate}</li>
-                    <li>Gravity :  {results.homeworld.gravity}</li>
-                    <li>Terrain :  {results.homeworld.terrain}</li>
-                    <li>Surface Water :  {results.homeworld.surface_water}</li>
-                    <li>Population :  {results.homeworld.population}</li>
-                </ul>
+                 <dl>
+                    <dt>Name  </dt>
+                    <dd>
+                      {results.homeworld.name}
+                    </dd>
+                    
+                    <dt>Diameter</dt>
+                    <dd>{results.homeworld.diameter}</dd>
+                    
+                    <dt>Climate</dt>
+                    <dd>{results.homeworld.climate}</dd>
+                    
+                    <dt>Gravity</dt>
+                    <dd>{results.homeworld.gravity}</dd>
+                    
+                    <dt>Terrain</dt>
+                    <dd>{results.homeworld.terrain}</dd>
+                    
+                    
+                    <dt>Population</dt>
+                    <dd>{results.homeworld.population}</dd>
+                </dl>
                 </div>
             ))
 
