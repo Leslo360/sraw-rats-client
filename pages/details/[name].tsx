@@ -1,6 +1,7 @@
 import React from 'react'
 import { gql, useQuery } from '@apollo/client'
-import Link from "next/link"
+import { useRouter } from 'next/router'
+
 import styles from '../../styles/Home.module.css'
 import Head from 'next/head'
 
@@ -40,6 +41,7 @@ query getPersonDetails($name : String!){
 `
 
 const PersonDetails = ({ QueryData} : any) => {
+  const router = useRouter()
   const {data, loading, error  } = useQuery(getPersonDetails, {
     variables : {
       name : QueryData.name
@@ -102,13 +104,13 @@ const PersonDetails = ({ QueryData} : any) => {
 
 
             <footer className={styles.footer}>
-              <Link href="/">
-                <a className={styles.btn}>
+              
+                <a className={styles.btn} onClick={() => router.back()}>
 
                 <h5>&larr;Go Back</h5>
                 </a>
                 
-              </Link>
+              
             </footer>
         </div>
     )
