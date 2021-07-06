@@ -85,7 +85,7 @@ export default function Home() {
       <footer className={styles.footer}>
 
         {
-          pageNum < 8 &&
+          pageNum < 9 &&
 
         <a onClick={handleNextPage} className={styles.btn}>
           <h5>Next &rarr;</h5>
